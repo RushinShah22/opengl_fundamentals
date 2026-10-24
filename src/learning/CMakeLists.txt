@@ -1,0 +1,1 @@
+target_sources(my_drawing PRIVATE translation_and_camera.cc)
