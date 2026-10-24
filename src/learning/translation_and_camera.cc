@@ -220,7 +220,7 @@ int main() {
     glEnable(GL_DEPTH_TEST);
     unsigned int VAO;
     create_triangle(vertices, sizeof(vertices), &VAO);
-    Program prog("/Users/rusher/OpenGL_Course/shaders/shader.vsh", "/Users/rusher/OpenGL_Course/shaders/shader.fsh");
+    Program prog("/Users/rusher/opengl_fundamentals/shaders/shader.vsh", "/Users/rusher/opengl_fundamentals/shaders/shader.fsh");
     if (prog.use() == -1) {
         std::cout << "Program creation failed" << std::endl;
         glfwTerminate();
@@ -242,8 +242,8 @@ int main() {
         }
     });
     glBindVertexArray(VAO);
-    load_texture("/Users/rusher/OpenGL_Course/artifacts/container.jpg", GL_RGB, prog, "texture", 0);
-    load_texture("/Users/rusher/OpenGL_Course/artifacts/awesomeface.png", GL_RGBA, prog, "smily_text", 1);
+    load_texture("/Users/rusher/opengl_fundamentals/artifacts/container.jpg", GL_RGB, prog, "texture", 0);
+    load_texture("/Users/rusher/opengl_fundamentals/artifacts/awesomeface.png", GL_RGBA, prog, "smily_text", 1);
     std::vector cube_pos {
         glm::vec3( 0.0f,  0.0f,  0.0f),
         glm::vec3( 2.0f,  5.0f, -15.0f),

@@ -177,10 +177,10 @@ int main()
         std::cout << "Issue creating window or initializing function pointers" << std::endl;
         return -1;
     }
-    Program prog("/Users/rusher/OpenGL_Course/shader.vsh", "/Users/rusher/OpenGL_Course/shader.fsh");
+    Program prog("/Users/rusher/opengl_fundamentals/shader.vsh", "/Users/rusher/opengl_fundamentals/shader.fsh");
     int width, height, nchannels;
     stbi_set_flip_vertically_on_load(true);
-    unsigned char *image = load_image("/Users/rusher/OpenGL_Course/container.jpg", &width, &height, &nchannels);
+    unsigned char *image = load_image("/Users/rusher/opengl_fundamentals/container.jpg", &width, &height, &nchannels);
     unsigned int texture_wooden_container;
     glGenTextures(1, &texture_wooden_container);
     glActiveTexture(GL_TEXTURE0);
@@ -198,7 +198,7 @@ int main()
 
     unsigned int smily_texture;
     glGenTextures(1, &smily_texture);
-    unsigned char *smily_image = load_image("/Users/rusher/OpenGL_Course/awesomeface.png", &width, &height, &nchannels);
+    unsigned char *smily_image = load_image("/Users/rusher/opengl_fundamentals/awesomeface.png", &width, &height, &nchannels);
 
     glBindTexture(GL_TEXTURE_2D, smily_texture);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
